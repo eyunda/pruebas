@@ -1,5 +1,13 @@
 export class Persona{
-    id!:number;
-    name!:String;
-    apellidos!:String;
+    IdPregunta!:number;
+    NivelPregunta!:number;
+    Descripcion!:String;
+    RespuestaCorrecta!:String;
+    Idrespuesta!: number;
+    Idpregunta!: number
+    TextoRespuesta!: String;
+    IdParticipante!: number;
+    Nombre!: String;
+    Puntos!: number;
+    Nivel!: number;
 }

@@ -8,21 +8,13 @@ export class ServiceService {
   
   constructor(private http:HttpClient) { }
 
-  Url='http://localhost:8080/ejemplo01/personas';
+  Url='https://localhost:7198/api/Juego';
 
-  getPersonas(){
-    return this.http.get<Persona[]>(this.Url);
+  getPreguntas(){
+    return this.http.get<Persona[]>(this.Url+"/ObtenerPregunta");
   }
   createPersona(persona:Persona){
-    return this.http.post<Persona>(this.Url,persona);
+    return this.http.post<Persona>(this.Url+"/CrearParticipante", persona);
   }
-  getPersonaId(id:number){
-    return this.http.get<Persona>(this.Url+"/"+id);
-  }
-  updatePersona(persona:Persona){
-    return this.http.put<Persona>(this.Url+"/"+persona.id,persona);
-  }
-  deletePersona(persona:Persona){
-    return this.http.delete<Persona>(this.Url+"/"+persona.id);
-  }
+
 }
